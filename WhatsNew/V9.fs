@@ -127,3 +127,64 @@ let (|A|B|C|D|E|F|G|H|) x =
     
 let (|A|B|_|) = None  // FS3872: Multi-case partial active patterns are not supported. Consider using a single-case partial active pattern or a full active pattern.
 
+
+// Implicit yield performance fix https://github.com/dotnet/fsharp/pull/17096
+
+module Test =
+        
+
+    type MyBuilder() =
+        member x.Zero() : float = 0.0
+        member x.Yield(a : float) = a
+        member x.Delay(l : unit -> float) = l()
+        member x.Run(l : float) = l
+        member x.Combine(l : float, r : float) = l+r 
+
+    let div = MyBuilder()   
+
+    let a() =
+        div {
+            div {
+                div {
+                    1
+                    div {
+                        div {
+                            
+                        }
+                        div {
+                            3.0
+                            div {
+                                1.0
+                                div {
+                                    2.0
+                                    div {
+                                       1.0
+                                       2.0
+                                       div {
+                                            div {
+                                                div {
+                                                    div {
+                                                        3.0
+                                                        div {
+                                                            3.0
+                                                            div {
+                                                                1.0
+                                                                div {
+                                                                    div {
+                                                                       1.0
+                                                                    }   
+                                                                }
+                                                            }   
+                                                        }
+                                                    }   
+                                                }
+                                            }   
+                                        }
+                                    }   
+                                }
+                            }   
+                        }
+                    }   
+                }
+            }   
+        }

@@ -121,4 +121,65 @@ type Contact =
 type Person = { name: string; contact: Contact }
 
 let canSendEmailTo person =
-    person.contact.IsEmail
+    person.contact.IsEmail 
+    
+module Test =
+        
+
+    type MyBuilder() =
+        member x.Zero() : float = 0.0
+        member x.Yield(a : float) = a
+        member x.Delay(l : unit -> float) = l()
+        member x.Run(l : float) = l
+        member x.Combine(l : float, r : float) = l+r 
+
+    let div = MyBuilder()
+    
+    let div2 = MyBuilder()
+    
+    let b() = div2 {  }
+
+    let a() =
+        div {
+            div {
+                div {
+                    1
+                    div {
+                    
+                        div {
+                            3.0
+                            div {
+                                1.0
+                                div {
+                                    2.0
+                                    div {
+                                       1.0
+                                       2.0
+                                       div {
+                                            div {
+                                                div {
+                                                    div {
+                                                        3.0
+                                                        div {
+                                                            3.0
+                                                            div {
+                                                                1.0
+                                                                div {
+                                                                    div {
+                                                                       1.0
+                                                                    }   
+                                                                }
+                                                            }   
+                                                        }
+                                                    }   
+                                                }
+                                            }   
+                                        }
+                                    }   
+                                }
+                            }   
+                        }
+                    }   
+                }
+            }   
+        }
