@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WhatsNew", "WhatsNew\WhatsNew.fsproj", "{590B3BB5-E6C1-49A6-B6A7-F39B0F2E9DC2}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WhatsOld", "WhatsOld\WhatsOld\WhatsOld.fsproj", "{B458EFB5-BF4A-45CD-969B-18B4AB2AAA0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{590B3BB5-E6C1-49A6-B6A7-F39B0F2E9DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590B3BB5-E6C1-49A6-B6A7-F39B0F2E9DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590B3BB5-E6C1-49A6-B6A7-F39B0F2E9DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590B3BB5-E6C1-49A6-B6A7-F39B0F2E9DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B458EFB5-BF4A-45CD-969B-18B4AB2AAA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B458EFB5-BF4A-45CD-969B-18B4AB2AAA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B458EFB5-BF4A-45CD-969B-18B4AB2AAA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B458EFB5-BF4A-45CD-969B-18B4AB2AAA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
